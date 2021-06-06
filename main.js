@@ -2,7 +2,7 @@
     "use strict";
 
     let numItems = 0;
-    const maxWeight = 100;
+    let maxWeight = 100;
     const data = [
         {
             name: "Passanger 1",
@@ -119,8 +119,15 @@
 
         b[0].onclick = sort;
         b[1].onclick = () => {
-            createEntry(e, e.querySelectorAll("dd").length - 1, "", "");
+            createEntry(e, e.querySelectorAll("dd").length - 2, "", "");
         }
+
+        let w = doc.getElementById("weight");
+
+        w.value = maxWeight;
+        w.oninput = () => {
+            maxWeight = Number(w.value);
+        };
 
         e.style.display = "block";
     }
