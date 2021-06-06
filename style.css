@@ -7,10 +7,6 @@ main {
     margin: 12px;
 }
 
-dl {
-
-}
-
 dl dt, dl dd {
     display: grid;
     grid-template-columns: 65% 35%;
@@ -22,16 +18,28 @@ dl span, dl input, dl button {
 }
 
 ol {
-    list-style: decimal inside;
+    list-style: none;
+    margin-top: 40px;
 }
 
 ol li {
-    margin: 4px 0;
+    margin: 0 50% 0 0;
     padding: 4px;
     border: 1px solid black;
+    border-radius: 4px 0 0 4px;
     text-align: left;
 }
 
+ol li:first-child {
+    border-radius: 4px 4px 0 4px;
+}
+
+ol li:last-child {
+    border-radius: 4px 0 4px 4px;
+}
+
 ol li:nth-child(even) {
+    margin: -1px 0 -1px calc(50% - 1px);
+    border-radius: 0 4px 4px 0;
     text-align: right;
 }
