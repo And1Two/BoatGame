@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 12px;
+}
+
+dl {
+
+}
+
+dl dt, dl dd {
+    display: grid;
+    grid-template-columns: 65% 35%;
+}
+
+dl span, dl input, dl button {
+    box-sizing: border-box;
+    margin: 4px;
+}
+
+ol {
+    list-style: decimal inside;
+}
+
+ol li {
+    margin: 4px 0;
+    padding: 4px;
+    border: 1px solid black;
+    text-align: left;
+}
+
+ol li:nth-child(even) {
+    text-align: right;
+}
